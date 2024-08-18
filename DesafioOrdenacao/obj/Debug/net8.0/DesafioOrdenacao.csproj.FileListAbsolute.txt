@@ -1,0 +1,14 @@
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\bin\Debug\net8.0\DesafioOrdenacao.exe
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\bin\Debug\net8.0\DesafioOrdenacao.deps.json
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\bin\Debug\net8.0\DesafioOrdenacao.runtimeconfig.json
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\bin\Debug\net8.0\DesafioOrdenacao.dll
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\bin\Debug\net8.0\DesafioOrdenacao.pdb
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.AssemblyInfoInputs.cache
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.AssemblyInfo.cs
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.csproj.CoreCompileInputs.cache
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.dll
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\refint\DesafioOrdenacao.dll
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.pdb
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.genruntimeconfig.cache
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\ref\DesafioOrdenacao.dll
