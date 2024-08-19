@@ -24,6 +24,7 @@ public abstract class AlgoritmoOrdenacao
         FileHandler.ArrayToArquivo(caminhoDeSaida, Sort(vetor));
     } 
 
+    //! Algoritmo de ordenação
     public virtual int[] Sort(int[] vetor)
     {
         return vetor;
