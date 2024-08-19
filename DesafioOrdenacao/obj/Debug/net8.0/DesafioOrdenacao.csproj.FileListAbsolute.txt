@@ -12,3 +12,4 @@ C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdena
 C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.pdb
 C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.genruntimeconfig.cache
 C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\ref\DesafioOrdenacao.dll
+C:\Users\matheus.colombo\Documents\Faculdade\Analise_de_algoritmos\DesafioOrdenacao\obj\Debug\net8.0\DesafioOrdenacao.sourcelink.json
