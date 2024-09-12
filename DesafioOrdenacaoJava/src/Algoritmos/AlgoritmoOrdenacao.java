@@ -10,10 +10,10 @@ public class AlgoritmoOrdenacao {
 
         long inicio = System.currentTimeMillis(); //! Inicia o cronômetro
         int[] vetorOrdenado = sort(vetor); //! Ordena o vetor
-        long tempoDecorrido = System.currentTimeMillis() - inicio; //! Para o cronômetro
+        long tempoExecucao = System.currentTimeMillis() - inicio; //! Para o cronômetro
 
         FileHandler.arrayToArquivo(caminhoDeSaida, vetorOrdenado);
-        return tempoDecorrido;
+        return tempoExecucao;
     }
 
     //! Algoritmo de ordenação (deve ser sobrescrito para implementar a ordenação)

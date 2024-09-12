@@ -17,7 +17,9 @@ public class FileHandler {
                 escritor.write(Integer.toString(rand.nextInt(quantidadeDeNumeros)));
                 escritor.newLine();
             }
-            System.err.println("Arquivo gerado!!");
+
+            System.out.println("Arquivo gerado!!");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -25,6 +27,7 @@ public class FileHandler {
 
     //! Cria um arquivo com os dados de um array
     public static void arrayToArquivo(String caminhoNovoArquivo, int[] vetor) {
+
         try (FileOutputStream fluxoDoArquivo = new FileOutputStream(caminhoNovoArquivo);
              BufferedWriter escritor = new BufferedWriter(new OutputStreamWriter(fluxoDoArquivo))) {
             
@@ -32,6 +35,7 @@ public class FileHandler {
                 escritor.write(Integer.toString(valor));
                 escritor.newLine();
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,7 +43,9 @@ public class FileHandler {
 
     //! Cria um array com os dados de um arquivo
     public static int[] arquivoToArray(String caminhoArquivo, int tamanhoVetor) {
+
         int[] vetor = new int[tamanhoVetor];
+
         try (FileInputStream fluxoDoArquivo = new FileInputStream(caminhoArquivo);
              BufferedReader leitor = new BufferedReader(new InputStreamReader(fluxoDoArquivo))) {
             
@@ -50,9 +56,11 @@ public class FileHandler {
                 vetor[c] = Integer.parseInt(linha);
                 c++;
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
         return vetor;
     }
 }
