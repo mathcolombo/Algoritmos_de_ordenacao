@@ -26,9 +26,9 @@ public class Start {
         
         for(int execucao = 1 ; execucao <= quantidadeDeExecucoes ; execucao++) {
             
-            int quantidadeDeNumeros = 10000;
-            int incrementoQuantidadeDeNumeros = 5000;
-            int paradaQuantidadeDeNumeros = 20000;
+            int quantidadeDeNumeros = 100000;
+            int incrementoQuantidadeDeNumeros = 60000;
+            int paradaQuantidadeDeNumeros = 700000;
             
 
             String pathExecucao = getPath(execucao);
