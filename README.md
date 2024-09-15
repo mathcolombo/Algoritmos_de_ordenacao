@@ -37,3 +37,10 @@ ordenação:
     * 700.000
 
     Cada conjunto de dados pode estar organizado de forma: crescente, decrescente e aleatório. Além disso, os conjuntos de dados podem conter apenas elementos distintos ou com elementos repetidos.
+
+    * Crescente com repetição
+    * Descrescente com repetição
+    * Aleatório com repetição
+    * Crescente sem repetição
+    * Descrescente sem repetição
+    * Aleatório sem repetição

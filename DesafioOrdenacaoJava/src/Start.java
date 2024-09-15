@@ -1,5 +1,4 @@
 import java.io.File;
-import java.nio.file.Path;
 import java.util.Scanner;
 
 import Algoritmos.*;
@@ -20,25 +19,37 @@ public class Start {
         Quick quick = new Quick();
         Selection selection = new Selection();
 
-        //! Quantidade inicial de números a serem ordenados
-        
-        int quantidadeDeExecucoes = 3;
+        //! Quantidade de execuções
+        int quantidadeDeExecucoes = 6;
         
         for(int execucao = 1 ; execucao <= quantidadeDeExecucoes ; execucao++) {
             
             int quantidadeDeNumeros = 100000;
             int incrementoQuantidadeDeNumeros = 60000;
             int paradaQuantidadeDeNumeros = 700000;
-            
 
-            String pathExecucao = getPath(execucao);
+            String tipoCriacao = "";
 
-            //! Título da bateria
+            //! Cria o subtítulo da execução
+            if(execucao == 1)
+                tipoCriacao = ": Crescente com repetição";
+            if(execucao == 2)
+                tipoCriacao = ": Decrescente com repetição";
+            if(execucao == 3)
+                tipoCriacao = ": Aleatório com repetição";
+            if(execucao == 4)
+                tipoCriacao = ": Crescente sem repetição";
+            if(execucao == 5)
+                tipoCriacao = ": Decrescente sem repetição";
+            if(execucao == 6)
+                tipoCriacao = ": Aleatório sem repetição";
+
+            //! Título da execução
             System.out.println();
             System.out.println();
             System.out.println("##################################################################################");
             System.out.println();
-            System.out.println("                                  EXECUÇÃO " + execucao);
+            System.out.println("                           EXECUÇÃO " + execucao + tipoCriacao);
             System.out.println();
             System.out.println("##################################################################################");
             System.out.println();
@@ -47,36 +58,61 @@ public class Start {
             //! Faz todas as baterias enquanto não atingir sua quantidade de números limite
             for(int bateria = 1 ; quantidadeDeNumeros <= paradaQuantidadeDeNumeros ; bateria++) {
     
-                
-                //! Título da bateria
-                System.out.println("##################################################################################");
-                System.out.println();
-                System.out.println("                               Bateria " + bateria + ": " + quantidadeDeNumeros);
-                System.out.println();
-                System.out.println("##################################################################################");
-                
-                
-                //! Variáveis de path referente aos requisitos
+                String pathExecucao = getPath(execucao);               
                 String path = adicionaBateriaPath(pathExecucao, bateria);
                 
-                String caminhoDeEntrada = path + "numerosAleatorios.csv";
+                //! Cria o diretório da bateria caso não exista
+                File diretorioBateria = new File(path);
+                if (!diretorioBateria.exists())
+                    diretorioBateria.mkdirs();
+
+                //! Variáveis de path referente aos requisitos
+                String caminhoDeEntrada = path + "numerosParaOrdenar.csv";   
                 String caminhoDeSaidaBubble = path + "bubbleSort.csv";
                 String caminhoDeSaidaHeap = path + "heapSort.csv";
                 String caminhoDeSaidaInsertion = path + "insertionSort.csv";
                 String caminhoDeSaidaMerge = path + "mergeSort.csv";
                 String caminhoDeSaidaQuick = path + "quickSort.csv";
                 String caminhoDeSaidaSelection = path + "selectionSort.csv";
-                
-                //! Verifica se o diretório ja existe, caso não exista o cria
-                File diretorio = new File(path);
-                if (!diretorio.exists()) {
-                    diretorio.mkdirs();
+
+                //! Cria os arquivos com os números a serem ordenados
+                if(execucao == 1) {
+                    System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    FileHandler.gerarArquivoCrescenteComRepeticao(caminhoDeEntrada, quantidadeDeNumeros);
                 }
                 
-                //! Gera o arquivo com números aleatórios
-                System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                FileHandler.gerarArquivoComNumerosAleatorios(caminhoDeEntrada, quantidadeDeNumeros);
+                if(execucao == 2) {
+                    System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    FileHandler.gerarArquivoDecrescenteComRepeticao(caminhoDeEntrada, quantidadeDeNumeros);
+                }
                 
+                if(execucao == 3) {
+                    System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    FileHandler.gerarArquivoAleatorioComRepeticao(caminhoDeEntrada, quantidadeDeNumeros);
+                }
+                
+                if(execucao == 4) {
+                    System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    FileHandler.gerarArquivoCrescenteSemRepeticao(caminhoDeEntrada, quantidadeDeNumeros);
+                }
+                
+                if(execucao == 5) {
+                    System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    FileHandler.gerarArquivoDecrescenteSemRepeticao(caminhoDeEntrada, quantidadeDeNumeros);
+                }
+                
+                if(execucao == 6) {
+                    System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    FileHandler.gerarArquivoAleatorioSemRepeticao(caminhoDeEntrada, quantidadeDeNumeros);
+                }
+
+                //! Título da bateria
+                System.out.println("##################################################################################");
+                System.out.println();
+                System.out.println("                               Bateria " + bateria + ": " + quantidadeDeNumeros);
+                System.out.println();
+                System.out.println("##################################################################################");
+
                 //! Roda os scripts de cronometrar
                 for(int c = 0 ; c < 6 ; c++) {
                     
@@ -163,7 +199,21 @@ public class Start {
 
     //! Retorna o caminho para salvar os arquivos de determinada execucao
     public static String getPath(int execucao) {
-        return "DesafioOrdenacaoJava/src/Utils/Files/" + execucao + "-Execucao/";
+
+        if(execucao == 1)
+            return "DesafioOrdenacaoJava/src/Utils/Files/" + execucao + "-CrescenteComRepeticao/";
+        if(execucao == 2)
+            return "DesafioOrdenacaoJava/src/Utils/Files/" + execucao + "-DecrescenteComRepeticao/";
+        if(execucao == 3)
+            return "DesafioOrdenacaoJava/src/Utils/Files/" + execucao + "-AleatorioComRepeticao/";
+        if(execucao == 4)
+            return "DesafioOrdenacaoJava/src/Utils/Files/" + execucao + "-CrescenteSemRepeticao/";
+        if(execucao == 5)
+            return "DesafioOrdenacaoJava/src/Utils/Files/" + execucao + "-DecrescenteSemRepeticao/";
+        if(execucao == 6)
+            return "DesafioOrdenacaoJava/src/Utils/Files/" + execucao + "-AleatorioSemRepeticao/";
+        
+        return "DesafioOrdenacaoJava/src/Utils/Files/ERROR"; 
     }
 
     //! Retorna o caminho para salvar os arquivos de determinada bateria
